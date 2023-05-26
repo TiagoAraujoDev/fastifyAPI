@@ -1,0 +1,22 @@
+{
+  "name": "fastifyapi",
+  "version": "1.0.0",
+  "description": "A webservice build in Ignite to lear fastify",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch --ignore ./node_modules ./src/server.ts"
+  },
+  "keywords": [],
+  "author": "Tiago Araujo",
+  "license": "ISC",
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^1.2.0",
+    "@types/node": "^20.2.3",
+    "eslint": "^8.41.0",
+    "tsx": "^3.12.7",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "fastify": "^4.17.0"
+  }
+}
