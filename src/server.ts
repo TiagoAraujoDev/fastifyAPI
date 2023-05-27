@@ -1,5 +1,6 @@
 import fastify from 'fastify'
 import { knex } from './database'
+import { env } from './env'
 
 const app = fastify({
   logger: true,
@@ -13,8 +14,8 @@ app.get('/hello', async () => {
 
 app.listen(
   {
-    host: '0.0.0.0',
-    port: 8080,
+    host: env.HOST,
+    port: env.PORT,
   },
   (error, address) => {
     if (!error) {
