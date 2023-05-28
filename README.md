@@ -7,6 +7,6 @@
 
 # RN
 
-- [] The transaction can be of type credit, which will add to the total value, or debit, which will subtract.
-- [] It should be possible to identify the user among the requests.
-  The user can only view transactions that they created.
+- [x] The transaction can be of type credit, which will add to the total value, or debit, which will subtract.
+- [x] It should be possible to identify the user among the requests.
+      The user can only view transactions that they created.
