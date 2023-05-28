@@ -1,9 +1,9 @@
 # RF
 
-- [] The user must be able to create a new transaction.
+- [x] The user must be able to create a new transaction.
 - [] The user must be able to get an account summary.
-- [] The user must be able to list all past transactions.
-- [] The user must be able to view a single transaction.
+- [x] The user must be able to list all past transactions.
+- [x] The user must be able to view a single transaction.
 
 # RN
 
