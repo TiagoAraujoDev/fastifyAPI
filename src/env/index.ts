@@ -1,5 +1,13 @@
-import 'dotenv/config'
+import dotenv from 'dotenv'
 import { z } from 'zod'
+
+if (process.env.NODE_ENV === 'test') {
+  dotenv.config({
+    path: '.env.test',
+  })
+} else {
+  dotenv.config()
+}
 
 interface IZodErrorMessage {
   code: string
@@ -24,14 +32,12 @@ if (_env.success === false) {
   const messageError: IZodErrorMessage[] = JSON.parse(_env.error.message)
 
   messageError.forEach((error, i: number) => {
-    console.log()
-    console.log(`Error: #${i + 1}`)
-    console.log()
+    console.log(`Error: #${i + 1}\n`)
     console.log(`Code\t\t=> ${error.code}`)
     console.log(`Path\t\t=> ${error.path}`)
     console.log(`Expected\t=> ${error.expected}`)
     console.log(`Received\t=> ${error.received}`)
-    console.log(`Message\t\t=> ${error.message}`)
+    console.log(`Message\t\t=> ${error.message}\n`)
   })
 
   throw new Error('⚠ Environment variables error!')
