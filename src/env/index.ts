@@ -19,6 +19,7 @@ interface IZodErrorMessage {
 
 const envSchema = z.object({
   NODE_ENV: z.enum(['development', 'test', 'production']).default('production'),
+  DATABASE_CLIENT: z.enum(['sqlite', 'pg']),
   DATABASE_URL: z.string(),
   PORT: z.coerce.number().default(8080),
   HOST: z.string().default('0.0.0.0'),
